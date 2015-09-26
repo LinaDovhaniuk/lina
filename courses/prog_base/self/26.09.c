@@ -1,7 +1,7 @@
 int main() {
 	int code, h, m;
 	float price;
-		scanf("%i %i %f", &code, &h, &m);
+		scanf("%i %i %i", &code, &h, &m);
 		switch (code){
 			case 44: price=0.44*(h*60+m);
 					break;
