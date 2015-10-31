@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1385320478 source:c:\users\evheniy\documents\github\lina\courses\prog_base\lessons\lesson_1\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1445686033 source:c:\users\evheniy\documents\github\lina\courses\prog_base\lessons\lesson_1\24.10.c
+	<stdio.h>
+	<stdlib.h>
+
+1445686108 source:c:\users\evheniy\documents\github\lina\courses\prog_base\lessons\lesson_1\array.c
+
