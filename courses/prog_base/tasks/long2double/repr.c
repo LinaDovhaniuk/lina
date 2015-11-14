@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main(){
-    long long a;
-    short i, sing;
-    double mantissa, value, result;
-    int exponent;
 
-double long2double(long long);
+double long2double(long long a){
+        short i, sing;
+        double mantissa, value, result;
+        int exponent;
+
 scanf("%lld ", &a);
     if ( (a>>63) == 0){
         exponent = (a >> 52);
@@ -49,4 +48,5 @@ for (i=51; i>=0; --i){
         printf("%lf" , value);
     }
   }
+
 
