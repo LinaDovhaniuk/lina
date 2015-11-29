@@ -28,7 +28,7 @@ void fprocess(const char * pread, const char * pwrite){
         printf("%s\n",istr);
         fprintf(fpwrite,"%s\n",istr);
     // Выделение очередной части строки
-        istr = (NULL, sep);
+        istr = strtok(NULL, sep);
     }
 
     res += strlen(istr);
