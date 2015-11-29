@@ -9,14 +9,14 @@ void fprocess(const char * pread, const char * pwrite){
 
     char sep[]={' ', ',','.','!'};
     char *istr;
-    char mystring[800];
+    char mystring[1000];
     int res=0;
 
     fpread = fopen(pread, "r");
     fpwrite = fopen(pwrite, "w");
 
-    for (int i = 0; i<=5; i++){
-        fgets(mystring, 800, fpread);
+    for (int i = 1; i<=5; i++){
+        fgets(mystring, 1000, fpread);
     }
 
     printf("The initial string : %s\n\n", mystring);
