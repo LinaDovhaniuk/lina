@@ -7,7 +7,7 @@ void fprocess(const char * pread, const char * pwrite){
     FILE *fpwrite;
     FILE *fpread;
 
-    char sep[]={' ', '_'};
+    char sep[]={' ','\t'};
     char *istr;
     char mystring[1000];
     int res=0;
