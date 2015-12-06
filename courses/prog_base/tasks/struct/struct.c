@@ -25,6 +25,7 @@ void count(int size, struct Photos ph[]){
             count++;
         }
     }
+	printf("The number of photo %i", count);
 }
 
 void change(struct Photos *ph, const char* newValue){
@@ -57,6 +58,7 @@ int main(void){
 	int indexCh = 1, result = 0;
 	print(size, ph);
 	count(size, ph);
+
 	puts("");
 	do {
 		fflush(stdin);
