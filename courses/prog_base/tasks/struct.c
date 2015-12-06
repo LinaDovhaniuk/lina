@@ -16,8 +16,6 @@ void count(int size, struct Photos ph[]){
     //t = 1449394733 06.12.15
     time_t start,end;
     int count = 1;
-    int* resindecies = (int*)malloc(size*sizeof(time_t));
-    int arrIndex = 0;
     end = time(NULL);
     int i;
     int result;
@@ -25,8 +23,6 @@ void count(int size, struct Photos ph[]){
         result = difftime(end, ph[i].datePh);
         if (result < (end - 2629743) ){
             count++;
-            resindecies[arrIndex] = i;
-            arrIndex++;
         }
     }
 }
