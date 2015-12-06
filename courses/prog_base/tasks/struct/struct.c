@@ -3,6 +3,8 @@
 #include <math.h>
 #include <time.h>
 
+
+
 struct Photos{
     char name[30];
     time_t datePh;
@@ -13,7 +15,6 @@ struct Photos{
 void count(int size, struct Photos ph[]){
     //t = 1449394733 06.12.15
     time_t start,end;
-    time_t tim[]={1449049133, 1446457133 , 1448703533, 1448185133, 1449308333};
     int count = 1;
     int* resindecies = (int*)malloc(size*sizeof(time_t));
     int arrIndex = 0;
@@ -21,8 +22,7 @@ void count(int size, struct Photos ph[]){
     int i;
     int result;
     for (i = 1; i < size; i++){
-        start = tim[i];
-        result = difftime(end, start);
+        result = difftime(end, ph[i].datePh);
         if (result < (end - 2629743) ){
             count++;
             resindecies[arrIndex] = i;
