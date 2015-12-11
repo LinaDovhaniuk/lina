@@ -21,7 +21,7 @@ int  n1=0, i, j;
 
 for (i=0; i< n; i++){
     for (j=1; j< m; j++){
- x+= pow(i,2)+ (n1 + 10)/j;
+ x+= pow(i,2)+ (double)(n1 + 10)/j;
     }
 }
 printf("%.2f ", x);

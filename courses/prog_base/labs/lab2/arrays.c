@@ -24,6 +24,7 @@ int main(){
 
     int index;
     int i;
+    srand(time(NULL));
         fillRand1(arr, size);
     for (i=0;i<size;i++)
         printf("%d\t", arr[i]);
@@ -40,7 +41,7 @@ int main(){
         maxOccurance(arr, size);
     printf("Value, which is most common in the array = %d\n", maxOccurance(arr, size));
         diff(arr1, arr2, res, size);
-    printf("Result = %d\n", diff(arr1, arr2, res, size));
+    printf("Diff = %d\n", diff(arr1, arr2, res, size));
        mult(arr1,arr2,res,size);
     printf("Mult\n");
     for (i=0;i<size;i++)
@@ -57,10 +58,10 @@ int main(){
 }
 
 void fillRand1(int arr[], int size){
-    srand(time(NULL));
+
     int i;
 	for (i = 0; i < size; i++)
-		arr[i] = rand() % 101 - 1;
+		arr[i] = rand() % (101 - 2)+1;
 }
 
 int checkRand1(int arr[], int size){
@@ -80,8 +81,9 @@ float meanValue(int arr[], int size){
 
 	for (i = 0; i < size; i++){
 		sum += arr[i];
-		res= sum/(float)size;
+
 	}
+    res= sum/(float)size;
 	return res;
 }
 
@@ -113,14 +115,10 @@ int meanIndex(int arr[], int size){
 
  int minIndex(int arr[], int size){
     int i=0;
-    int index;
+    int index=0;
     int minimum = arr[0];
      for (i=0; i< size; i++){
-        /*if (arr[i+1]>arr[i]){
-            minimum = arr[i];
-            index = i;
-        }*/
-        if (arr[i] < minimum){
+            if (arr[i] < minimum){
             minimum = arr[i];
             index = i;
         }
@@ -186,6 +184,9 @@ void land(int arr1[], int arr2[], int res[], int size){
         arr1[i]=rand()%2;
         arr2[i]=rand()%2;
         res[i]= arr1[i] &&  arr2[i];
+        printf("%d\t", arr1[i]);
+        printf(" %d\t\n", arr2[i]);
     }
+        printf("\n");
 }
 

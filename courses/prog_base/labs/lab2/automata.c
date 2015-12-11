@@ -22,7 +22,7 @@ printf("%d ", order);
 
 return 0;
 }
-int run(int moves[], int movesLen, int res[], int resLen){
+int run(int moves[],int movesLen, int res[], int resLen){
 
 int i, j;
 for (i = 0; i < resLen; i++)
@@ -77,12 +77,7 @@ curState = arraySecond[curState][curMove];
 break;
         }
 }
-
-/*for (i = 0; i < resLen; i++)
-{
-if (res[i] != 0)
-resNumbers++;
-}*/
 return resNumbers;
 
-}
+ }
+
