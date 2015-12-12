@@ -30,7 +30,7 @@ void count(int size, struct Film f[]){
             count++;
         }
     }
-	printf("The number of films (<1995)%i", count);
+	printf("The number of films (<1995) : %i", count);
 }
 
 void print (int size,struct dragon * dr ){
