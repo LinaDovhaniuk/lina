@@ -45,11 +45,11 @@ void print (int size,struct dragon * dr ){
     }
 }
 
-void pr(int size,struct dragon * dr ){
+void pr(int size,struct dragon * dr, struct Film *f ){
     int i;
-
+    time_t end = time(NULL);
     for (i = 0; i < 3; i++){
-        if (dr[i].sizeDr>20){
+        if (dr[i].sizeDr>20 && f[i].date < (end - 818763558)){
         printf("%d. %s\n", i + 1, dr[i].name);
         printf("Size : %i", dr[i].sizeDr);
         printf("  Age  : %d \n", dr[i].age);
@@ -66,10 +66,11 @@ int main(){
     print(size, dr);
 
     printf("\nThe correct actors :\n");
-    pr(size,dr);
+    struct Film  f[3] = {"Dragons", 2010,"Arrr", 2000, "Blabla", 1900};
+    pr(size,dr,f);
 
     printf("\nFilms :\n");
-    struct Film  f[3] = {"Dragons", 2010,"Arrr", 2000, "Blabla", 1900};
+    //struct Film  f[3] = {"Dragons", 2010,"Arrr", 2000, "Blabla", 1900};
     count(size,f);
 
 

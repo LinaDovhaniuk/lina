@@ -5,13 +5,13 @@
 #include <stdio.h>
 #include <ctype.h>
 
-void length(char tmp, char * p1);
+void length(char *tmp, char * p1);
 int main(){
 
     char * fileName = "input.txt";
     char * outPut = "output.txt";
     FILE * fp;
-    char tmp;
+    char tmp ;
     int status = 0;
     int count = 1;
     char str[100];
@@ -34,11 +34,12 @@ int main(){
 
     }
 
+fclose(fp);
 
-length(tmp,p1);
+length(str,p1);
 printf("%s",p2);
 
-fclose(fp);
+
 
 fp = fopen("output.txt", "w");
     if (fp == NULL) {
@@ -54,10 +55,11 @@ fp = fopen("output.txt", "w");
 
 }
 
-void length(char tmp, char * p1){
+void length(char *str, char * p1){
 int len;
 char * p2;
-p1=strtok(tmp," ");
+const char space[] = " ";
+p1=strtok(str,space);
  while (p1!=NULL)
      {
       len=strlen(p1);
