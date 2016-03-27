@@ -33,7 +33,7 @@ void * SymbolSetter(void * args){
             tmp->num = 0;
         }
         mutex_unlock(tmp->mu);
-        Sleep(800);
+        Sleep(640000);
     }
     return NULL;
 }
