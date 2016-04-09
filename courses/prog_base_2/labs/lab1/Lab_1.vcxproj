@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{18C99435-6360-4AD6-B08E-2C00C1F9FAE1}</ProjectGuid>
+    <ProjectGuid>{01A8F08C-E724-476F-B633-9F956C9AB8F6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Lab_1</RootNamespace>
   </PropertyGroup>
@@ -79,13 +79,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="post.h" />
+    <ClInclude Include="terminal.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="post.c" />
     <ClCompile Include="terminal.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="post.h" />
-    <ClInclude Include="terminal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

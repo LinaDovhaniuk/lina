@@ -1,4 +1,4 @@
-#ifndef POST_H_INCLUDED
+п»ї#ifndef POST_H_INCLUDED
 #define POST_H_INCLUDED
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
@@ -13,11 +13,12 @@ typedef struct car_s car_t;
 enum STATUS {
 	POST_OK,
 	POST_OVERFLOW,
-	POST_EMPTY
+	POST_EMPTY,
+	POST_INVALIDINDEX
 };
 post_t * post_create();
 enum STATUS post_getStatus(post_t * self);
-enum VILATION post_getRandomViolation();//порушення
+enum VILATION post_getRandomViolation();//ГЇГ®Г°ГіГёГҐГ­Г­Гї
 car_t * post_addCar(post_t * self);
 int post_getMachineSpeed(post_t * self, int index);
 int post_getNumOfCars(post_t * self);
