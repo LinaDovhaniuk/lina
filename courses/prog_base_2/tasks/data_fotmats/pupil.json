@@ -1,0 +1,38 @@
+[
+    {
+        "name" : "Lina",
+        "surname" : "Dovhaniuk",
+        "birthdate" : "1998-06-10",
+        "sex" : "Female",
+        "year" : 2004,
+        "score" : 11.6,
+        "class" : {
+            "number" : "11",
+            "speciality" : "FIZ-MAT"
+        }
+    },
+    {
+        "name" : "Kate",
+        "surname" : "Levoshko",
+        "birthdate" : "1999-09-15",
+        "sex" : "Female",
+        "score" : 11.7,
+        "class" : {
+            "number" : "10",
+            "speciality" : "FIZ-MAT"
+        }
+    },
+    {
+        "name" : "Dmitriy",
+        "surname" : "Urukov",
+        "birthdate" : "2000-01-31",
+        "sex" : "Male",
+        "year" : 2005,
+        "score" : 12.0,
+        "class" : {
+            "number" : "9",
+            "speciality" : "FIZ-MAT"
+        }
+    }
+]
+

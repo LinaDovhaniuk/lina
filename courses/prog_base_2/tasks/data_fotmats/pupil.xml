@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pupils>
+    <pupil>
+        <name>Lina</name>
+        <surname>Dovhaniuk</surname>
+        <birthdate>1998-06-10</birthdate>
+        <sex>Female</sex>
+        <year>2004</year>
+        <score>11.7</score>
+        <class name = "11">
+              <speciality>FIZ-MAT</speciality>
+        </class>
+    </pupil>
+    <pupil>
+        <name>Kate</name>
+        <surname>Levoshko</surname>
+        <birthdate>1999-09-15</birthdate>
+        <sex>Female</sex>
+        <year>2005</year>
+        <score>11.85</score>
+        <class name = "10">
+              <speciality>FIZ-MAT</speciality>
+        </class>
+    </pupil>
+    <pupil>
+        <name>Dmitriy</name>
+        <surname>Urukov</surname>
+        <birthdate>2000-01-31</birthdate>
+        <sex>Female</sex>
+        <year>2006</year>
+        <score>12.0</score>
+        <class name = "9">
+              <speciality>FIZ-MAT</speciality>
+        </class>
+    </pupil>
+</pupils>
+
