@@ -1,4 +1,5 @@
 #include "post.h"
+#include "car.h"
 #include <time.h>
 
 
@@ -6,23 +7,19 @@ struct post_s{
 	struct car_s * arrayOfCars[NUM_OF_CARS];
 	int numOfPost;
 	int numOfCars;
-	int * fine[NUM_OF_CARS];
 	int status;
 };
-struct car_s{
-	char machineNumber[11];
-	int speed;
-	char viol;
-};
+
 
 enum VIOLATION{
-	stopping_rule,
-	prohibited_signal,
-	exit_at_crossroads,
-	counter_strip,
-	road_sings,
-	phone,
-	nothing
+	post_stoppingRule,
+	post_prohibitedSignal,
+	post_exitAtCrossroads,
+	post_counterStrip,
+	post_roadSings,
+	post_phone,
+	post_speeding,
+	post_nothing
 };
 
 
@@ -41,30 +38,23 @@ post_t * post_create(){
 	return p;
 }
 
-car_t * post_addCar(post_t * self){
-	self->arrayOfCars[self->numOfCars] = (car_t*)malloc(sizeof(struct car_s));
-	sprintf(self->arrayOfCars[self->numOfCars]->machineNumber, "%c%c %d%d%d%d %c%c", rand() % 26 + 65, rand() % 26 + 65, rand() % 10, rand() % 10, rand() % 10, rand() % 10, rand() % 26 + 65, rand() % 26 + 65);
-	self->arrayOfCars[self->numOfCars]->speed = rand() % 120 + 80;
+car_t * post_addViolation(post_t * self){
+	car_t * car = car_create();
+
+	car = self->arrayOfCars[self->numOfCars] = car_addCar();
 	self->numOfPost = rand() % 5 + 1;
-	self->arrayOfCars[self->numOfCars]->viol = post_getRandomViolation();
-	for (int i = 0; i < self->numOfCars + 1; i++){
-		if (self->arrayOfCars[i]->speed > 100){
-			self->fine[i] = (self->arrayOfCars[i]->speed) * 3;
-		}
-		else
-			self->fine[i] = (self->arrayOfCars[i]->speed) * 0;
-	}
 	self->status = POST_OK;
 	(self->numOfCars)++;
 	return self->arrayOfCars[self->numOfCars - 1];
 }
+
 int post_getMachineSpeed(post_t * self, int index){
 	if (index > NUM_OF_CARS || index < 0){
 		self->status = POST_INVALIDINDEX;
 		return -1;
 	}
 	self->status = POST_OK;
-	return self->arrayOfCars[index]->speed;
+	return car_getSpeed(self->arrayOfCars[index]);
 }
 
 int post_getNumOfCars(post_t * self){
@@ -77,33 +67,27 @@ char* post_getMachineNumber(post_t * self, int index){
 		return -1;
 	}
 	self->status = POST_OK;
-	return self->arrayOfCars[index]->machineNumber;
+	return car_getMachineNumber(self->arrayOfCars[index]);
 }
 char * post_getMachineViolation(post_t * self, int index){
-	const char * arrayOfViolations[] = {
-		"stopping_rule",
-		"prohibited_signal",
-		"exit_at_crossroads",
-		"counter_strip",
-		"road_sings",
-		"phone",
-		"nothing"
-	};
+	
 	if (index >= NUM_OF_CARS || index < 0){
 		self->status = POST_INVALIDINDEX;
 		return -1;
 	}
 	self->status = POST_OK;
-	return arrayOfViolations[self->arrayOfCars[index]->viol];
+	return car_getMachineViolation(self->arrayOfCars[index]);
 }
+
 enum VIOLATION * post_getMachineViolationEnum(post_t * self, int index){
 	if (index >= NUM_OF_CARS || index < 0){
 		self->status = POST_INVALIDINDEX;
 		return -1;
 	}
 	self->status = POST_OK;
-	return self->arrayOfCars[index]->viol;
+	return car_getMachineViolationEnum(self->arrayOfCars[index]);
 }
+
 int post_getNumOfPost(post_t * self, int index){
 	if (index >= NUM_OF_CARS || index < 0){
 		self->status = POST_INVALIDINDEX;
@@ -118,14 +102,11 @@ int post_getViolationFine(post_t * self, int index){
 		return -1;
 	}
 	self->status = POST_OK;
-	return self->fine[index];
+	return car_getFine(self->arrayOfCars[index]);
 }
 
 
 
 void post_remove(post_t * self){
-	for (int i = 0; i<self->numOfCars; i++){
-		free(self->arrayOfCars[i]);
-	}
 	free(self);
 }

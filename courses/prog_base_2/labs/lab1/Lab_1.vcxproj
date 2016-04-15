@@ -79,10 +79,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="car.h" />
     <ClInclude Include="post.h" />
     <ClInclude Include="terminal.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="car.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="post.c" />
     <ClCompile Include="terminal.c" />
