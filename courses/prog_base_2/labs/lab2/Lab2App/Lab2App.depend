@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1461358972 source:d:\op\labs\lab_2\lab2app\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	"queue.h"
+
+1461351825 d:\op\labs\lab_2\lab2app\queue.h
+	<stdio.h>
+	<stdlib.h>
+
