@@ -1,0 +1,9 @@
+CREATE TABLE "Pupil" (
+	`Id`	INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`Name`	TEXT NOT NULL,
+	`Surname`	TEXT NOT NULL,
+	`Score`	REAL,
+	`Class`	INTEGER DEFAULT 11,
+	`Growth`	REAL
+);
+

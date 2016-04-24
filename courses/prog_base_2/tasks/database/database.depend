@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1461506144 source:d:\tasks\database\database\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pupil.h"
+	<sqlite3.h>
+
+1461531796 d:\tasks\database\database\pupil.h
+	<sqlite3.h>
+
+1461531804 source:d:\tasks\database\database\pupil.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"sqlite3.h"
+	"pupil.h"
+
+1461502510 d:\tasks\database\database\sqlite3.h
+	<stdarg.h>
+
