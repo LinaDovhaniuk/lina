@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1461405645 source:d:\op\practice\win_32\main.c
+	<windows.h>
+	<CommCtrl.h>
+
+1463177644 source:d:\op\practice\windows\main.c
+	"func.h"
+
+1463177744 source:d:\op\practice\windows\func.c
+	"func.h"
+
+1463176960 d:\op\practice\windows\func.h
+	<windows.h>
+	<CommCtrl.h>
+	<math.h>
+
+1463177744 source:d:\github\lina\courses\prog_base_2\tasks\windows\func.c
+	"func.h"
+
+1463176960 d:\github\lina\courses\prog_base_2\tasks\windows\func.h
+	<windows.h>
+	<CommCtrl.h>
+	<math.h>
+
+1463177959 source:d:\github\lina\courses\prog_base_2\tasks\windows\main.c
+	"func.h"
+
