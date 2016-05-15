@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QFileInfo>
 #include "mainwindow.h"
+#include "adminform.h"
 #include "database.h"
 
 namespace Ui {
@@ -25,7 +26,7 @@ private slots:
 
 private:
     Ui::Login *ui;
-    MainWindow *admForm;
+    AdminForm *adminForm;
     DataBase *db;
 };
 

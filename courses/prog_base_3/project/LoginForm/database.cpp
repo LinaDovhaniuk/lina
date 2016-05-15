@@ -88,8 +88,6 @@ bool DataBase::createClientTable()
                         "phone integer NOT NULL"
                     ");"
                     )){
-        qDebug() << "DataBase: error of create " << DEVICE;
-        qDebug() << query.lastError().text();
         return false;
     } else {
         return true;
@@ -113,8 +111,6 @@ bool DataBase::createTrainingTable(){
                     ");"
 
                     )){
-        qDebug() << "DataBase: error of create " << DEVICE;
-        qDebug() << query.lastError().text();
         return false;
     } else {
         return true;
@@ -134,8 +130,6 @@ bool DataBase::createInventoryTable()
                         "price integer NOT NULL"
                     ");"
                     )){
-        qDebug() << "DataBase: error of create " << DEVICE;
-        qDebug() << query.lastError().text();
         return false;
     } else {
         return true;
@@ -158,8 +152,6 @@ bool DataBase::createAbonnementTable()
                         "FOREIGN KEY(client_id) REFERENCES CLIENTS(id)"
                     ");"
                     )){
-        qDebug() << "DataBase: error of create " << DEVICE;
-        qDebug() << query.lastError().text();
         return false;
     } else {
         return true;

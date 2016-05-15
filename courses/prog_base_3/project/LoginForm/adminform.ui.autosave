@@ -138,7 +138,7 @@
      <string>Training</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="abonnementBotton">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -157,7 +157,7 @@
      <string>Abonnement</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="addBotton">
     <property name="geometry">
      <rect>
       <x>270</x>

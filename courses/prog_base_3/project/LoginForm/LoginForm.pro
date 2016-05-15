@@ -17,13 +17,16 @@ SOURCES += main.cpp\
         login.cpp \
     adminform.cpp \
     database.cpp \
-    mainwindow.cpp
+    clientform.cpp \
+    abonnementform.cpp
 
 HEADERS  += login.h \
     adminform.h \
     database.h \
-    mainwindow.h
+    clientform.h \
+    abonnementform.h
 
 FORMS    += login.ui \
     adminform.ui \
-    mainwindow.ui
+    clientform.ui \
+    abonnementform.ui

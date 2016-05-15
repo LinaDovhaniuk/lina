@@ -1,44 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AdminForm</class>
- <widget class="QMainWindow" name="AdminForm">
+ <class>abonnementForm</class>
+ <widget class="QMainWindow" name="abonnementForm">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>489</width>
-    <height>387</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="ClientReviewButton">
+   <widget class="QLineEdit" name="name">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>121</width>
+      <x>140</x>
+      <y>80</y>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>MV Boli</family>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Clients</string>
-    </property>
    </widget>
-   <widget class="QPushButton" name="CoachReviewButton">
+   <widget class="QLineEdit" name="surname">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>130</y>
-      <width>121</width>
+      <x>140</x>
+      <y>110</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backBotton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>81</width>
       <height>20</height>
      </rect>
     </property>
@@ -49,35 +50,35 @@
      </font>
     </property>
     <property name="text">
-     <string>Coaches</string>
+     <string>Back</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="InventReviewButton">
+   <widget class="QPushButton" name="buyMonth">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>170</y>
-      <width>121</width>
-      <height>21</height>
+      <y>160</y>
+      <width>111</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>MV Boli</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Inventory</string>
+     <string>Buy for month</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>20</x>
       <y>0</y>
-      <width>441</width>
-      <height>81</height>
+      <width>401</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -87,25 +88,15 @@
      </font>
     </property>
     <property name="text">
-     <string>   Admin Page</string>
+     <string>  Abonnement</string>
     </property>
    </widget>
-   <widget class="QTableView" name="adminTable">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>90</y>
-      <width>301</width>
-      <height>181</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="AdminExitButton">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>290</y>
-      <width>91</width>
+      <x>30</x>
+      <y>80</y>
+      <width>111</width>
       <height>20</height>
      </rect>
     </property>
@@ -116,15 +107,15 @@
      </font>
     </property>
     <property name="text">
-     <string>Exit</string>
+     <string>Name</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="TrainReviewButton">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>210</y>
-      <width>121</width>
+      <x>30</x>
+      <y>110</y>
+      <width>111</width>
       <height>21</height>
      </rect>
     </property>
@@ -135,64 +126,36 @@
      </font>
     </property>
     <property name="text">
-     <string>Training</string>
+     <string>Surname</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QCalendarWidget" name="calendarWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>250</y>
-      <width>121</width>
-      <height>20</height>
+      <x>320</x>
+      <y>80</y>
+      <width>141</width>
+      <height>121</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>MV Boli</family>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Abonnement</string>
-    </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="buyYeqr">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>290</y>
-      <width>91</width>
+      <x>150</x>
+      <y>160</y>
+      <width>111</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>MV Boli</family>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Add</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="findBotton">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>290</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>MV Boli</family>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Find</string>
+     <string> Buy for year</string>
     </property>
    </widget>
   </widget>
@@ -201,7 +164,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>489</width>
+     <width>800</width>
      <height>17</height>
     </rect>
    </property>

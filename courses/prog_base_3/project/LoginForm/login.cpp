@@ -8,9 +8,9 @@ Login::Login(QWidget *parent) :
     //admForm = new MainWindow();
     ui->setupUi(this);
 
-    admForm = new MainWindow();
-    //db = new DataBase();
-    //db->connectToDataBase();
+    adminForm = new AdminForm();
+    db = new DataBase();
+    db->connectToDataBase();
 
     /*mydb = QSqlDatabase::addDatabase("QSQLITE");
     mydb.setDatabaseName("D:/project/Gym_newVersion/LoginForm/db.db");
@@ -28,10 +28,8 @@ Login::~Login()
 
 
 void Login::on_pushButton_clicked(){
-//   if(db->authorization(ui->loginLineEdit->text().toUpper(),ui->passwordLineEdit->text())){
-//       this->close();
-//       adminForm->show();
-//   }
-    admForm->show();
-
+    if(db->authorization(ui->loginLineEdit->text().toUpper(),ui->passwordLineEdit->text())){
+        this->close();
+        adminForm->show();
+    }
 }
