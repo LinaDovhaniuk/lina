@@ -28,7 +28,7 @@ Login::~Login()
 
 
 void Login::on_pushButton_clicked(){
-    if(db->authorization(ui->loginLineEdit->text().toUpper(),ui->passwordLineEdit->text())){
+    if(db->authorization(ui->loginLineEdit->text(),ui->passwordLineEdit->text())){
         this->close();
         adminForm->show();
     }

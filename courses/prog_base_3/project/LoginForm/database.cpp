@@ -17,7 +17,7 @@ void DataBase::connectToDataBase()
     /* Перед подключением к базе данных производим проверку на её существование.
      * В зависимости от результата производим открытие базы данных или её восстановление
      * */
-    if(!QFile("D:/project/Gym_newVersion/LoginForm/db.db").exists()){
+    if(!QFile("D:/OP/project/LoginForm/db.sqlite").exists()){
         this->restoreDataBase();
     } else {
         this->openDataBase();
@@ -29,10 +29,10 @@ void DataBase::connectToDataBase()
 bool DataBase::restoreDataBase()
 {
     if(this->openDataBase()){
-        if(!this->createClientTable()){
-            if(!this->createTrainingTable()){
-                if(!this->createInventoryTable()){
-                    if(!this->createAbonnementTable()){
+        if(this->createClientTable()){
+                if(this->createInventoryTable()){
+                    if(this->createAbonnementTable()){
+                        if(this->createTrainingTable()){
                         return false;
                     }
                 }
@@ -57,7 +57,7 @@ bool DataBase::openDataBase()
      * */
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setHostName(DATABASE_HOSTNAME);
-    db.setDatabaseName("D:/project/Gym_newVersion/LoginForm/db.db");
+    db.setDatabaseName("D:/OP/project/LoginForm/db.sqlite");
     if(db.open()){
         return true;
     } else {
@@ -162,7 +162,7 @@ bool DataBase::createAbonnementTable()
 bool DataBase:: authorization(QString login, QString password){
     QSqlQuery query;
 
-    if (query.exec("SELECT PASSWORD FROM CLIENTS WHERE LOGIN = '"+login+"';")){
+    if (query.exec("SELECT PASSWORD FROM ABONNEMENT WHERE LOGIN = '"+login+"';")){
         if (query.next()){
             if(query.value(0)== password){
                 return true;
