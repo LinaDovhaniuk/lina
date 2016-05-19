@@ -35,8 +35,8 @@ public:
     QTableView *adminTable;
     QPushButton *AdminExitButton;
     QPushButton *TrainReviewButton;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *abonnementButton;
+    QPushButton *addButton;
     QPushButton *findBotton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -81,14 +81,14 @@ public:
         TrainReviewButton->setObjectName(QStringLiteral("TrainReviewButton"));
         TrainReviewButton->setGeometry(QRect(20, 210, 121, 21));
         TrainReviewButton->setFont(font);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(20, 250, 121, 20));
-        pushButton->setFont(font);
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(270, 290, 91, 21));
-        pushButton_2->setFont(font);
+        abonnementButton = new QPushButton(centralwidget);
+        abonnementButton->setObjectName(QStringLiteral("abonnementButton"));
+        abonnementButton->setGeometry(QRect(20, 250, 121, 20));
+        abonnementButton->setFont(font);
+        addButton = new QPushButton(centralwidget);
+        addButton->setObjectName(QStringLiteral("addButton"));
+        addButton->setGeometry(QRect(270, 290, 91, 21));
+        addButton->setFont(font);
         findBotton = new QPushButton(centralwidget);
         findBotton->setObjectName(QStringLiteral("findBotton"));
         findBotton->setGeometry(QRect(380, 290, 91, 21));
@@ -116,8 +116,8 @@ public:
         label->setText(QApplication::translate("AdminForm", "   Admin Page", 0));
         AdminExitButton->setText(QApplication::translate("AdminForm", "Exit", 0));
         TrainReviewButton->setText(QApplication::translate("AdminForm", "Training", 0));
-        pushButton->setText(QApplication::translate("AdminForm", "Abonnement", 0));
-        pushButton_2->setText(QApplication::translate("AdminForm", "Add", 0));
+        abonnementButton->setText(QApplication::translate("AdminForm", "Abonnement", 0));
+        addButton->setText(QApplication::translate("AdminForm", "Add", 0));
         findBotton->setText(QApplication::translate("AdminForm", "Find", 0));
     } // retranslateUi
 
