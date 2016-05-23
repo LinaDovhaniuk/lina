@@ -82,6 +82,7 @@
     <ClCompile Include="callbacks.c" />
     <ClCompile Include="event.c" />
     <ClCompile Include="helper.c" />
+    <ClCompile Include="list.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="user.c" />
   </ItemGroup>
@@ -90,6 +91,7 @@
     <ClInclude Include="event.h" />
     <ClInclude Include="headers.h" />
     <ClInclude Include="helper.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="user.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

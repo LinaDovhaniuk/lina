@@ -1,24 +1,14 @@
 #include "callbacks.h"
 
 
-void YellowNotification_callback(user_t user, event_t event){
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, 15);
+void user_notification_firstCallback(user_t user, event_t event){
 	printf("Dear %s, event %s (%s) start at %s",user->name,event->title,event->notification,ctime(&(event->time)));
+
 }
 
-void WhiteNotification_callback(user_t user, event_t event){
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, 13);
-	printf("Dear %s, event %s (%s) start at %s", user->name, event->title, event->notification, ctime(&(event->time)));
-	SetConsoleTextAttribute(hConsole,15);
-}
-
-void PinkNotification_callback(user_t user, event_t event){
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, 14);
-	printf("Dear %s, event %s (%s) start at %s", user->name, event->title, event->notification, ctime(&(event->time)));
-	SetConsoleTextAttribute(hConsole, 15);
+void user_notification_secondCallback(user_t user, event_t event){
+	printf("%s, attention please. Event %s (%s) start at %s", user->name, event->title, event->notification, ctime(&(event->time)));
+	
 }
 
 void notification_group_callback(group_t group, event_t event){

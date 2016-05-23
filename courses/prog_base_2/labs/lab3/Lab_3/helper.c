@@ -7,14 +7,34 @@ helper_t helper_create(){
 	helper_t helper = (helper_t)malloc(sizeof(struct helper_s));
 	helper->numOfUsers = 0;
 	helper->numOfGroup = 0;
+	helper->numOfEvents = 0;
 	return helper;
 }
 
 void helper_notification(helper_t self){
-	time_t t;
+	int count = 0;
+	while (count < self->numOfEvents){
+		for (int i = 0; i < self->numOfEvents; i++){
+			if (event_getNumOfUsers(self->events[i]) != 0){
+				for (int j = 0; j < event_getNumOfUsers(self->events[i]); j++){
+					user_notification_cb cb = user_getCB(self->users[j]);
+					if (NULL != cb)
+						cb(event_getUser(self->events[i], j), self->events[i]);
+				}
+			}
+			if (event_getNumOfGroups(self->events[i]) != 0){
+				for (int j = 0; j < event_getNumOfGroups(self->events[i]); j++){
+					group_getCB(self->groups[j])(event_getGroup(self->events[i], j), self->events[i]);
+				}
+			}
+			Sleep(1000);
+			count++;
+		}
+	}
 	
-	while (1){
-		int user_count = 0;
+
+
+		/*int user_count = 0;
 		int group_count = 0;
 		for (int i = 0; i < self->numOfUsers; i++){
 			for (int j = 0; j < self->users[i]->numOfEvents; j++){
@@ -50,7 +70,7 @@ void helper_notification(helper_t self){
 		Sleep(1000);
 		if (user_count == 0 && group_count == 0)
 			break;
-		}
+		}*/
 }
 
 void  helper_addUser(helper_t self,user_t user){
@@ -62,8 +82,15 @@ void  helper_addGroup(helper_t self, group_t group){
 }
 
 void helper_remove(helper_t self){
-	for (int i = 0; i < self->numOfUsers; i++){
-		free(self->users[i]);
-	}
 	free(self);
+}
+
+int helper_addEvent(helper_t helper, event_t event){
+	if (helper->numOfEvents < MAX_NUM_OF_EVENTS){
+		helper->events[helper->numOfEvents++] = event;
+		return 1;
+	}
+	else {
+		return 0;
+	}
 }
