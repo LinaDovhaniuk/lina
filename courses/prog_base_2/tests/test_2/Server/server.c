@@ -56,9 +56,9 @@ void server_first(socket_t * client, http_request_t * req)
     if (strcmp(req->method, "GET") == 0)
     {
         cJSON * jText = cJSON_CreateObject();
-        cJSON_AddItemToObject(jText, "student", cJSON_CreateString("Vitaliy Lobov"));
+        cJSON_AddItemToObject(jText, "student", cJSON_CreateString("Lina Dovhaniuk"));
         cJSON_AddItemToObject(jText, "group", cJSON_CreateString("KP-51"));
-        cJSON_AddItemToObject(jText, "variant", cJSON_CreateNumber(20));
+        cJSON_AddItemToObject(jText, "variant", cJSON_CreateNumber(23));
         char * pageText = cJSON_Print(jText);
 
         char * text = textToJSON(pageText);
