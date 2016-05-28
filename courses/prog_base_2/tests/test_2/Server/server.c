@@ -7,6 +7,11 @@
 #include "pupil.h"
 #include "windows.h"
 
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <dirent.h>
+#include <windows.h>
+
 static char * textToJSON(char * text);
 static char * textToJSON(char * text)
 {
@@ -83,22 +88,46 @@ void server_db(socket_t * client, http_request_t * req, db_t * db, list_t * pupi
     socket_write_string(client, buffer);
     socket_close(client);
 }
+int dir_exists(const char * dirname) {
+    struct stat buffer;
+    return (stat (dirname, &buffer) == 0) && S_ISDIR(buffer.st_mode);
+}
 
 void server_dir(socket_t * client, http_request_t * req){
     char buffer[10240] = "";
     if (strcmp(req->method, "POST") == 0) {
         char * title = (char *)http_request_getArg(req, "title");
-        //strcat(buffer, title);
-        //free(title);
-        sprintf(buffer,
+        if( dir_exists(title) == 1){
+            if(RemoveDirectoryA((LPCTSTR )title) == 1){
+                cJSON *jResp = cJSON_CreateObject();
+                cJSON_AddItemToObject(jResp, "Title", cJSON_CreateString(title));
+                cJSON_AddItemToObject(jResp, "Status", cJSON_CreateString("Deleted"));
+                char * response = cJSON_Print(jResp);
+                sprintf(buffer,
+                    "HTTP/1.1 200 OK\n"
+                    "Content-Type: text/html\n"
+                    "Content-Length: %zu\n"
+                    "\n%s", strlen(response),response);
+            }
+        }
+        else{
+            cJSON *jResp = cJSON_CreateObject();
+            cJSON_AddItemToObject(jResp, "Title", cJSON_CreateString(title));
+            cJSON_AddItemToObject(jResp, "Status", cJSON_CreateString("Not exist"));
+            char * response = cJSON_Print(jResp);
+            sprintf(buffer,
             "HTTP/1.1 404 Not Found\n"
             "Content-Type: text/html\n"
             "Content-Length: %zu\n"
-            "\n%s", strlen(title), title);
+            "\n%s", strlen(response), response);
+        }
+
     }
     socket_write_string(client, buffer);
     socket_close(client);
 }
+
+
 
 void server_sendInputPage(socket_t* client,http_request_t * req){
     char buffer[10240] = "";
@@ -107,11 +136,10 @@ void server_sendInputPage(socket_t* client,http_request_t * req){
 	FILE* finput = fopen("input.html", "r");
 	int len = fread(page, sizeof(char), sizeof(page) / sizeof(char), finput);
 	page[len] = '\0';
-
 	fclose(finput);
 
 	 sprintf(buffer,
-            "HTTP/1.1 404 Not Found\n"
+            "HTTP/1.1 200 OK\n"
             "Content-Type: text/html\n"
             "Content-Length: %zu\n"
             "\n%s", strlen(page), page);

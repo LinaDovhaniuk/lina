@@ -20,7 +20,7 @@ void pupil_remove(pupil_t * self) {
     free(self);
 }
 
-void pupil_addInfo(pupil_t * self, int id, char * name, char * surname, int Class, double score, double growth) {
+void pupil_addInfo(pupil_t * self, int id,char * name,char * surname, int Class, double score, double growth) {
     self->id = id;
     strcpy(self->name, name);
     strcpy(self->surname, surname);
@@ -37,7 +37,7 @@ char * pupil_getSurname(pupil_t * self){
     return self->surname;
 }
 
-int pupil_getClass(pupil_t * pupil){
+int pupil_getClass(pupil_t * self){
     return self->Class;
 }
 
@@ -45,7 +45,7 @@ double pupil_getScore(pupil_t * self){
     return self->score;
 }
 
-double pupil_pupilGrowth(pupil_t * self){
+double pupil_getGrowth(pupil_t * self){
     return self->growth;
 }
 
