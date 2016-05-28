@@ -125,7 +125,7 @@ int main()
             }
             else if (strcmp(request.uri, "/database") == 0)
             {
-                server_db(client, &request, db, master);
+                server_db(client, &request, db, pupil);
             }
             else if (strncmp(request.uri, "/files/", 7) == 0)
             {
@@ -140,7 +140,7 @@ int main()
 
     socket_free(client);
     socket_free(server);
-    list_free(master);
+    list_free(pupil);
     db_free(db);
     lib_free();
     return 0;
