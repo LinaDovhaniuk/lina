@@ -19,20 +19,6 @@ static char * textToJSON(char * text)
     return buffer;
 }
 
-/*void server_homepage(socket_t * client)
-{
-    char buffer[1024] = "";
-    char * pageText =
-        "<h1>Database!</h1>"
-        "<a href=\"http://127.0.0.1:5000/Database\">All Databases</a>";
-
-    char * text = textToHTML(pageText);
-    strcat(buffer, text);
-    free(text);
-
-    socket_write_string(client, buffer);
-    socket_close(client);
-}*/
 
 void server_notFound(socket_t * client)
 {
