@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:400px;
+    width:150px;
+    float:left;
+    padding:5px;
+}
+section {
+    width:950px;
+    float:left;
+    padding:10px;
+	
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+</style>
+</head>
+<body>
+	
+	<form action="/pupils" method="POST">
+	Name:<br>
+	<input type="text" name="name" value='Ivan' required><br>
+	Surname:<br>
+	<input type="text" name="surname" value='Ivanov' required><br>
+	Birthday:<br>
+	<input type="text" name="birthday" value='1950-05-04' required><br>
+	Sex:<br>
+	<input type="text" name="sex" value='Male' required><br>
+	Year:<br>
+	<input type="text" name="year" value='2004' required><br>
+	Class:<br>
+	<input type="text" name="class" value='11' required><br>
+	Score:<br>
+	<input type="text" name="score" value='4.5' required><br>
+	<br>
+	
+	<input type="submit" value='Send POST request'/>
+
+</form>
+</body>
+</html>
+ 

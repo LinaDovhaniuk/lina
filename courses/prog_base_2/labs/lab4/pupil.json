@@ -1,0 +1,28 @@
+[{
+	"id": 1,
+	"name": "Lina",
+	"surname": "Dovhaniuk",
+	"birthday": "1998-06-10",
+	"sex": "Female",
+	"year": 2004,
+	"score": 12.0,
+	"class": 11
+}, {
+	"id": 2,
+	"name": "Natalia",
+	"surname": "Levoshko",
+	"birthday": "1999-09-15",
+	"sex": "Female",
+	"year": 2006,
+	"score": 11.7,
+	"class": 11
+}, {
+	"id": 3,
+	"name": "Alex",
+	"surname": "Zaika",
+	"birthday": "2000-01-31",
+	"sex": "Male",
+	"year": 2005,
+	"score": 12.0,
+	"class": 11
+}]

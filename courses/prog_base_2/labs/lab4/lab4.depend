@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1464523350 source:d:\github\lina\courses\prog_base_2\labs\lab4\cjson.c
+	<string.h>
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<float.h>
+	<limits.h>
+	<ctype.h>
+	"cJSON.h"
+
+1464523397 d:\github\lina\courses\prog_base_2\labs\lab4\cjson.h
+
+1464523584 source:d:\github\lina\courses\prog_base_2\labs\lab4\http.c
+	<stddef.h>
+	"http.h"
+
+1464523581 d:\github\lina\courses\prog_base_2\labs\lab4\http.h
+
+1464976437 source:d:\github\lina\courses\prog_base_2\labs\lab4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cJSON.h"
+	"server.h"
+	"list.h"
+
+1464977794 source:d:\github\lina\courses\prog_base_2\labs\lab4\pupil.c
+	"pupil.h"
+
+1464976353 source:d:\github\lina\courses\prog_base_2\labs\lab4\server.c
+	"server.h"
+
+1464523095 source:d:\github\lina\courses\prog_base_2\labs\lab4\socket.c
+	<winsock2.h>
+	"socket.h"
+
+1464523126 d:\github\lina\courses\prog_base_2\labs\lab4\socket.h
+
+1464977187 d:\github\lina\courses\prog_base_2\labs\lab4\pupil.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	"cJSON.h"
+	"list.h"
+	"http.h"
+
+1464976405 d:\github\lina\courses\prog_base_2\labs\lab4\server.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<stddef.h>
+	"pupil.h"
+	<windows.h>
+	"cJSON.h"
+	"socket.h"
+	"http.h"
+
+1464637031 source:d:\github\lina\courses\prog_base_2\labs\lab4\list.c
+	<stdlib.h>
+	"list.h"
+
+1464646536 d:\github\lina\courses\prog_base_2\labs\lab4\list.h
+	<stdlib.h>
+
