@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminForm</class>
+ <widget class="QMainWindow" name="AdminForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>882</width>
+    <height>585</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>115</x>
+      <y>2</y>
+      <width>441</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>48</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>   Admin Page</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="adminTable">
+    <property name="geometry">
+     <rect>
+      <x>381</x>
+      <y>88</y>
+      <width>484</width>
+      <height>335</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AdminExitButton">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>446</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addButton">
+    <property name="geometry">
+     <rect>
+      <x>641</x>
+      <y>441</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="findBotton">
+    <property name="geometry">
+     <rect>
+      <x>746</x>
+      <y>441</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="abonnementButton">
+    <property name="geometry">
+     <rect>
+      <x>27</x>
+      <y>327</y>
+      <width>245</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Abonnement</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TrainReviewButton">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>219</y>
+      <width>251</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Training</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="InventReviewButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>271</y>
+      <width>249</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Inventory</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CoachReviewButton">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>164</y>
+      <width>253</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Coaches</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ClientReviewButton">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>114</y>
+      <width>243</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Clients</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>AdminExitButton</zorder>
+   <zorder>addButton</zorder>
+   <zorder>findBotton</zorder>
+   <zorder>adminTable</zorder>
+   <zorder>abonnementButton</zorder>
+   <zorder>TrainReviewButton</zorder>
+   <zorder>InventReviewButton</zorder>
+   <zorder>CoachReviewButton</zorder>
+   <zorder>ClientReviewButton</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>882</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
