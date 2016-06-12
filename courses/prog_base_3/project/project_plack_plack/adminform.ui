@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminForm</class>
+ <widget class="QMainWindow" name="AdminForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1198</width>
+    <height>585</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>124</x>
+      <y>4</y>
+      <width>881</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>72</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>   Admin Page</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="adminTable">
+    <property name="geometry">
+     <rect>
+      <x>418</x>
+      <y>114</y>
+      <width>472</width>
+      <height>356</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(222, 200, 212);</string>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AdminExitButton">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>493</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(223, 203, 214);</string>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addButton">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>225</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(233, 216, 224);</string>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="findBotton">
+    <property name="geometry">
+     <rect>
+      <x>29</x>
+      <y>384</y>
+      <width>101</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(222, 198, 211)</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TrainReviewButton">
+    <property name="geometry">
+     <rect>
+      <x>26</x>
+      <y>115</y>
+      <width>144</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(228, 208, 219);</string>
+    </property>
+    <property name="text">
+     <string>Training</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="InventReviewButton">
+    <property name="geometry">
+     <rect>
+      <x>28</x>
+      <y>165</y>
+      <width>146</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(228, 208, 219);</string>
+    </property>
+    <property name="text">
+     <string>Inventory</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CoachReviewButton">
+    <property name="geometry">
+     <rect>
+      <x>26</x>
+      <y>68</y>
+      <width>146</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 206, 217);</string>
+    </property>
+    <property name="text">
+     <string>Coaches</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ClientReviewButton">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>16</y>
+      <width>147</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(228, 211, 221);</string>
+    </property>
+    <property name="text">
+     <string>Clients</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="findLog">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>353</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>34</x>
+      <y>313</y>
+      <width>92</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>266</y>
+      <width>104</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(223, 201, 213);</string>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>0</y>
+      <width>700</width>
+      <height>537</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../project/картинки/4486275.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>633</x>
+      <y>-4</y>
+      <width>566</width>
+      <height>539</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../project/картинки/s6.png</pixmap>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label</zorder>
+   <zorder>AdminExitButton</zorder>
+   <zorder>addButton</zorder>
+   <zorder>findBotton</zorder>
+   <zorder>adminTable</zorder>
+   <zorder>TrainReviewButton</zorder>
+   <zorder>InventReviewButton</zorder>
+   <zorder>CoachReviewButton</zorder>
+   <zorder>ClientReviewButton</zorder>
+   <zorder>findLog</zorder>
+   <zorder>label_3</zorder>
+   <zorder>pushButton</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1198</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
