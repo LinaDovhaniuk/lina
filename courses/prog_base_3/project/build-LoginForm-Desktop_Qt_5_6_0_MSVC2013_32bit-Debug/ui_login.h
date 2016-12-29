@@ -44,17 +44,17 @@ public:
     {
         if (Login->objectName().isEmpty())
             Login->setObjectName(QStringLiteral("Login"));
-        Login->resize(800, 600);
+        Login->resize(535, 380);
         Login->setAutoFillBackground(false);
         Login->setIconSize(QSize(400, 300));
         centralWidget = new QWidget(Login);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(110, 10, 250, 100));
+        label->setGeometry(QRect(143, -27, 429, 161));
         QFont font;
         font.setFamily(QStringLiteral("AR BLANCA"));
-        font.setPointSize(72);
+        font.setPointSize(48);
         label->setFont(font);
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
@@ -72,13 +72,13 @@ public:
         status->setGeometry(QRect(10, 220, 261, 21));
         loginLineEdit = new QLineEdit(centralWidget);
         loginLineEdit->setObjectName(QStringLiteral("loginLineEdit"));
-        loginLineEdit->setGeometry(QRect(150, 109, 191, 31));
+        loginLineEdit->setGeometry(QRect(150, 109, 142, 27));
         passwordLineEdit = new QLineEdit(centralWidget);
         passwordLineEdit->setObjectName(QStringLiteral("passwordLineEdit"));
-        passwordLineEdit->setGeometry(QRect(150, 149, 191, 31));
+        passwordLineEdit->setGeometry(QRect(150, 149, 142, 26));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(240, 190, 80, 16));
+        pushButton->setGeometry(QRect(237, 190, 83, 24));
         QFont font2;
         font2.setFamily(QStringLiteral("MV Boli"));
         font2.setPointSize(14);
@@ -86,7 +86,7 @@ public:
         Login->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Login);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 800, 17));
+        menuBar->setGeometry(QRect(0, 0, 535, 17));
         Login->setMenuBar(menuBar);
         mainToolBar = new QToolBar(Login);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

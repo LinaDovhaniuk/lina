@@ -181,7 +181,7 @@
 	<stdio.h>
 	"list.h"
 
-1464439836 source:d:\github\lina\courses\prog_base_2\tests\test_2\server\main.c
+1464556853 source:d:\github\lina\courses\prog_base_2\tests\test_2\server\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -192,12 +192,13 @@
 	<windows.h>
 	"list.h"
 	"server.h"
+	"dataBase.h"
 
-1464438606 d:\github\lina\courses\prog_base_2\tests\test_2\server\server.h
+1464557003 d:\github\lina\courses\prog_base_2\tests\test_2\server\server.h
 	"socket.h"
 	"http.h"
 	"cJSON.h"
-	"db_manager.h"
+	"dataBase.h"
 
 1464428959 d:\github\lina\courses\prog_base_2\tests\test_2\server\socket.h
 
@@ -207,7 +208,7 @@
 	<stdio.h>
 	"ScrumMaster.h"
 
-1464441957 source:d:\github\lina\courses\prog_base_2\tests\test_2\server\server.c
+1464533311 source:d:\github\lina\courses\prog_base_2\tests\test_2\server\server.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -215,6 +216,10 @@
 	"server.h"
 	"pupil.h"
 	"windows.h"
+	<sys/stat.h>
+	<sys/types.h>
+	<dirent.h>
+	<windows.h>
 
 1464428959 source:d:\github\lina\courses\prog_base_2\tests\test_2\server\socket_win.c
 	<winsock2.h>
@@ -277,7 +282,7 @@
 	<ctype.h>
 	<math.h>
 
-1464435191 source:d:\github\lina\courses\prog_base_2\tests\test_2\server\database.c
+1465156592 source:d:\github\lina\courses\prog_base_2\tests\test_2\server\database.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>

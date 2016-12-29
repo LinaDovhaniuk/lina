@@ -14,6 +14,7 @@ int main(){
     socket_listen(server);
 
     char buffer[10000];
+    char bufferCopy[10000];
     socket_t * client = NULL;
 
     list_t * pupils = list_new();
@@ -21,11 +22,13 @@ int main(){
     FILE * fp = fopen("pupil.json","r");
     fread(jsonText,sizeof(char),10000,fp);
     pupil_createPupilsList(pupils,cJSON_Parse(jsonText));
+    fclose(fp);
 
     while (1) {
 		socket_t * client = socket_accept(server);
 		socket_read(client, buffer, sizeof(buffer));
 		printf("%s", buffer);
+		strcpy(bufferCopy, buffer);
 		server_request_t request = server_request_parse(buffer);
 		if (strcmp(request.method, "GET") == 0){
             if(strcmp(request.uri,"/")==0){
@@ -33,6 +36,10 @@ int main(){
             }
 			else if (strcmp(request.uri,"/api/pupils")==0){
                 server_sendJson(client,pupil_listToJson(pupils));
+			}
+			else if (strstr(request.uri, "/api/pupils?") != 0){
+                //http_request_t req = http_get_request_parse(buffer);
+                //printf("%s %s\n", req.form[1]->key, req.form[1]->value);
 			}
 			else if(strncmp(request.uri,"/api/pupils/",strlen("/api/pupils/"))==0){
 			    int id;

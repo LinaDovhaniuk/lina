@@ -13,8 +13,7 @@
 #include <windows.h>
 
 static char * textToJSON(char * text);
-static char * textToJSON(char * text)
-{
+static char * textToJSON(char * text){
     char * buffer = malloc(sizeof(char) * 10240);
 
     sprintf(buffer,

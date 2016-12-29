@@ -52,8 +52,6 @@ void db_parse(db_t * self, list_t * list_of_pupils){
             pupil_t * p = pupil_create();
             pupil_addInfo(p, id, name, surname, Class, score,growth);
             list_add(list_of_pupils, p);
-
-
         }
     }
 

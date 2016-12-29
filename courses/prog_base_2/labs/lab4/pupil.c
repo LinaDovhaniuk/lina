@@ -1,4 +1,3 @@
-
 #include "pupil.h"
 
 struct pupil_s{
@@ -118,9 +117,6 @@ cJSON * pupil_listToJson(list_t * pupils){
     return arr;
 }
 
-
-
-
 cJSON* pupil_pupilToJson(pupil_t * pupil){
      cJSON *jPupil = cJSON_CreateObject();
             cJSON_AddItemToObject(jPupil,"id",cJSON_CreateNumber(pupil_getId(pupil)));
@@ -137,17 +133,19 @@ cJSON* pupil_pupilToJson(pupil_t * pupil){
 
 int checkInputData(char * name, char * surname, char * birthday,char * sex, char * Class, char * score, char * year){
     int ibuf;
-    for (int i = 0; i < strlen(name); i++){
-        if (!isalpha(i)) return 0;
-    }
+    char st_data[25];
+    strcpy(st_data,birthday);
+    char * str;
+    str = strtok(st_data,"-");
+    if (strlen(str) != 4 || atoi(str) < 1 || atoi(str) > 2016 ) return 0;
+    str = strtok(NULL,"-");
+    if (strlen(str) != 2 || atoi(str) < 1 || atoi(str) > 12) return 0;
+    str = strtok(NULL,"\0");
+    if (strlen(str) != 2 || atoi(str) < 1 || atoi(str) > 31 ) return 0;
 
-    for (int i = 0; i < strlen(surname); i++){
-        if (!isalpha(i)) return 0;
-    }
-
-    for (int i = 0; i < strlen(birthday); i++){
-        if (!(isalnum(i) || birthday[i] == '-')) return 0;
-    }
+   // for (int i = 0; i < strlen(birthday); i++){
+     //   if (!(isalnum(i) || birthday[i] == '-')) return 0;
+    //}
 
     if(!sscanf(Class,"%i",&ibuf)) return 0;
     if(!sscanf(year,"%i",&ibuf)) return 0;

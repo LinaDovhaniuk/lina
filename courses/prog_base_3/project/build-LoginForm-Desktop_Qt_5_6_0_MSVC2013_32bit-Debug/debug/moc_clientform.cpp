@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../../../../OP/project/LoginForm/clientform.h"
+#include "C:/Users/linad/Documents/Downloads/lina-master/courses/prog_base_3/project/LoginForm/clientform.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

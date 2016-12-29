@@ -11,6 +11,7 @@
 
 #include "list.h"
 #include "server.h"
+#include "dataBase.h"
 
 int main(){
     lib_init();
